@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/welcomelbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/carbtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomelbl"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:hint="Enter Carb intake (grams): "
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:singleLine="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/currentbloodlbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carbtxt"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Current Blood Level: "
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/estimatedinsluinlbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="Estimated Amount of units of insulin: "
+        android:layout_below="@id/currentbloodlbl"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/scanbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan Blood"
+        android:shadowColor="@android:color/transparent"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/estimatedinsluinlbl"
+        android:textColor="@color/white"
+        android:background="@drawable/shapelogin"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calculatebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcuate Estimated Units"
+        android:shadowColor="@android:color/transparent"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/scanbtn"
+        android:textColor="@color/white"
+        android:background="@drawable/shapelogin"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lowsuggestionsbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculatebtn"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:background="@drawable/shapelogin"
+        android:padding="10dp"
+        android:shadowColor="@android:color/transparent"
+        android:text="View Low Blood Suggestions" />
+
+    <ListView
+        android:id="@+id/lowsuggestionlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lowsuggestionsbtn"
+        android:layout_marginTop="35dp"
+        android:padding="10dp"
+        android:shadowColor="@android:color/transparent"
+        android:text="low suggestions"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewdetailbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lowsuggestionlist"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:background="@drawable/shapelogin"
+        android:padding="10dp"
+        android:shadowColor="@android:color/transparent"
+        android:text="View User Details" />
+</RelativeLayout>
