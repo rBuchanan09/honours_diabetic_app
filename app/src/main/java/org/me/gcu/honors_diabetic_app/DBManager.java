@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class DBManager {
     Connection connection;
     String driver = "com.mysql.jdbc.Driver";
-    String host = "sql8.freemysqlhosting.net", port = "3306", db_name = "/sql8614203", sql_user_name="sql8614203", sql_password="nxDg5jaRW2";
+    String host = "host_name", port = "port", db_name = "db_name", sql_user_name="sql_user_name", sql_password="sql_pass_word";
     String connection_string = "jdbc:mysql://" + host + ":" + port + db_name;
 
     public Connection set_up_connection() {
